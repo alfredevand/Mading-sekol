@@ -5,7 +5,10 @@ let data = await res.json()
 
 document.getElementById("pengumuman").innerText = data.pengumuman
 document.getElementById("infoMinggu").innerText = data.infoMinggu
-document.getElementById("videoFrame").src = data.video
+
+let vid = document.getElementById("videoFrame")
+vid.src = data.video
+vid.play()
 
 updateJadwal(data.jadwal)
 
