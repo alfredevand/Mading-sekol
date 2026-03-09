@@ -42,7 +42,7 @@ border-radius:10px;
 
 .container{
 display:flex;
-height:520px;
+flex:1;
 }
 
 /* VIDEO AREA */
