@@ -1,78 +1,22 @@
 {
-  "X.1": {
-    "senin": [
-      { "jam": "07:00-07:30", "mapel": "Devotion" },
-      { "jam": "07:30-08:15", "mapel": "Sosiologi" },
-      { "jam": "08:15-09:00", "mapel": "Sosiologi" },
-      { "jam": "09:00-09:45", "mapel": "Geografi" },
-      { "jam": "09:45-10:00", "mapel": "Istirahat" },
-      { "jam": "10:00-10:45", "mapel": "Geografi" },
-      { "jam": "10:45-11:30", "mapel": "Kimia" },
-      { "jam": "11:30-12:15", "mapel": "Kimia" },
-      { "jam": "12:15-12:45", "mapel": "Istirahat" },
-      { "jam": "12:45-13:30", "mapel": "B. Indo" },
-      { "jam": "13:30-14:15", "mapel": "B. Indo" },
-      { "jam": "14:15-15:00", "mapel": "CLUB*" },
-      { "jam": "15:00-15:45", "mapel": "CLUB*" }
-    ],
+"pengumuman":"Selamat datang di Mading Digital SMA Hari",
+"infoMinggu":"Minggu ini ada lomba kebersihan kelas",
 
-    "selasa": [
-      { "jam": "07:00-07:30", "mapel": "Devotion" },
-      { "jam": "07:30-08:15", "mapel": "PJOK" },
-      { "jam": "08:15-09:00", "mapel": "PJOK" },
-      { "jam": "09:00-09:45", "mapel": "Fisika" },
-      { "jam": "09:45-10:00", "mapel": "Istirahat" },
-      { "jam": "10:00-10:45", "mapel": "Fisika" },
-      { "jam": "10:45-11:30", "mapel": "Biologi" },
-      { "jam": "11:30-12:15", "mapel": "Biologi" },
-      { "jam": "12:15-12:45", "mapel": "Istirahat" },
-      { "jam": "12:45-13:30", "mapel": "Sejarah" },
-      { "jam": "13:30-14:15", "mapel": "Sejarah" },
-      { "jam": "14:15-15:00", "mapel": "CLUB*" },
-      { "jam": "15:00-15:45", "mapel": "CLUB*" }
-    ],
+"video":"https://www.youtube.com/embed/dQw4w9WgXcQ",
 
-    "rabu": [
-      { "jam": "07:00-07:30", "mapel": "Devotion" },
-      { "jam": "07:30-08:15", "mapel": "MTK" },
-      { "jam": "08:15-09:00", "mapel": "MTK" },
-      { "jam": "09:00-09:45", "mapel": "IF" },
-      { "jam": "09:45-10:00", "mapel": "Istirahat" },
-      { "jam": "10:00-10:45", "mapel": "IF" },
-      { "jam": "10:45-11:30", "mapel": "Agama" },
-      { "jam": "11:30-12:15", "mapel": "Agama" },
-      { "jam": "12:15-12:45", "mapel": "Istirahat" },
-      { "jam": "12:45-13:30", "mapel": "Ekonomi" },
-      { "jam": "13:30-14:15", "mapel": "Ekonomi" },
-      { "jam": "14:15-15:00", "mapel": "CLUB*" },
-      { "jam": "15:00-15:45", "mapel": "CLUB*" }
-    ],
+"jadwal":{
 
-    "kamis": [
-      { "jam": "07:00-07:30", "mapel": "Devotion" },
-      { "jam": "07:30-08:15", "mapel": "B. Indo" },
-      { "jam": "08:15-09:00", "mapel": "Musik" },
-      { "jam": "09:00-09:45", "mapel": "Musik" },
-      { "jam": "09:45-10:00", "mapel": "Istirahat" },
-      { "jam": "10:00-10:45", "mapel": "Mandarin" },
-      { "jam": "10:45-11:30", "mapel": "PWU" },
-      { "jam": "11:30-12:15", "mapel": "MTK" },
-      { "jam": "12:15-12:45", "mapel": "Istirahat" },
-      { "jam": "12:45-13:30", "mapel": "MTK" },
-      { "jam": "13:30-14:15", "mapel": "Pramuka" },
-      { "jam": "14:15-15:00", "mapel": "Pramuka" }
-    ],
+"Senin":[
+{"mulai":7,"selesai":8,"mapel":"Matematika"},
+{"mulai":8,"selesai":9,"mapel":"Bahasa Indonesia"},
+{"mulai":9,"selesai":10,"mapel":"Fisika"}
+],
 
-    "jumat": [
-      { "jam": "07:00-07:30", "mapel": "Devotion" },
-      { "jam": "07:30-08:15", "mapel": "Literasi" },
-      { "jam": "08:15-09:00", "mapel": "Inggris" },
-      { "jam": "09:00-09:45", "mapel": "Inggris" },
-      { "jam": "09:45-10:00", "mapel": "Istirahat" },
-      { "jam": "10:00-10:45", "mapel": "Pancasila" },
-      { "jam": "10:45-11:30", "mapel": "Pancasila" },
-      { "jam": "11:30-12:15", "mapel": "Istirahat" },
-      { "jam": "12:15-12:45", "mapel": "Ekskul" }
-    ]
-  }
+"Selasa":[
+{"mulai":7,"selesai":8,"mapel":"Kimia"},
+{"mulai":8,"selesai":9,"mapel":"Biologi"}
+]
+
+}
+
 }

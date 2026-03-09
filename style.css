@@ -1,0 +1,98 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#e3f2fd;
+}
+
+/* HEADER */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#4FC3F7;
+color:white;
+padding:15px;
+border-bottom:5px solid #0288D1;
+}
+
+.logo img{
+height:70px;
+}
+
+.title{
+font-size:40px;
+font-weight:bold;
+letter-spacing:3px;
+}
+
+.clock{
+font-size:28px;
+font-weight:bold;
+background:white;
+color:#0288D1;
+padding:10px 20px;
+border-radius:10px;
+}
+
+/* LAYOUT */
+
+.container{
+display:flex;
+height:520px;
+}
+
+/* VIDEO AREA */
+
+.video{
+flex:3;
+padding:20px;
+background:white;
+}
+
+.video h2{
+color:#0288D1;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+flex:1;
+background:#4FC3F7;
+display:flex;
+flex-direction:column;
+}
+
+.info{
+flex:1;
+padding:20px;
+background:white;
+margin:10px;
+border-radius:10px;
+}
+
+.info h3{
+color:#0288D1;
+}
+
+.jadwal{
+flex:1;
+padding:20px;
+background:white;
+margin:10px;
+border-radius:10px;
+}
+
+.jadwal h3{
+color:#0288D1;
+}
+
+/* RUNNING TEXT */
+
+.running{
+background:#0288D1;
+color:white;
+font-size:22px;
+padding:12px;
+font-weight:bold;
+}

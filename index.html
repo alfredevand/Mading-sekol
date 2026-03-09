@@ -1,235 +1,59 @@
 <!DOCTYPE html>
-<html lang="id">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>TV Sekolah</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: white;
-}
-
-/* ================= HEADER ================= */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 4px solid #0b3c7d;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    height: 80px;
-    width: auto;
-}
-
-header h1 {
-    color: #0b3c7d;
-    font-size: 36px;
-    margin: 0;
-    text-align: center;
-    flex: 1;
-}
-
-#jam {
-    font-size: 32px;
-    font-weight: bold;
-    color: #0b3c7d;
-}
-
-/* ================= CONTENT ================= */
-main {
-    display: flex;
-    height: 75vh;
-}
-
-/* VIDEO */
-.video {
-    width: 70%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video iframe {
-    width: 95%;
-    height: 95%;
-    border: none;
-}
-
-/* SIDEBAR */
-.sidebar {
-    width: 30%;
-    padding: 20px;
-    border-left: 4px solid #0b3c7d;
-}
-
-.sidebar h2 {
-    color: #0b3c7d;
-    font-size: 26px;
-    text-align: center;
-    margin-top: 0;
-}
-
-/* TABLE JADWAL */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 20px;
-}
-
-th {
-    background: #0b3c7d;
-    color: white;
-    padding: 8px;
-}
-
-td {
-    padding: 6px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-}
-
-.aktif {
-    background: #ffeb3b;
-    font-weight: bold;
-}
-
-/* ================= FOOTER ================= */
-footer {
-    background: #0b3c7d;
-    color: white;
-    font-size: 22px;
-    padding: 10px;
-}
-</style>
+<title>INFO SMA HARI</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header>
-    <div class="logo">
-        <img src="1.png" alt="Logo Sekolah">
-    </div>
+<div class="header">
 
-    <h1>INFO SMA KRISTEN TERANG BANGSA</h1>
+<div class="logo">
+<img src="1.png" height="70">
+</div>
 
-    <div id="jam">00:00</div>
-</header>
+<div class="title">
+INFO SMA HARI
+</div>
 
-<!-- ================= CONTENT ================= -->
-<main>
+<div class="clock" id="clock">
+00:00
+</div>
 
-    <!-- VIDEO -->
-    <div class="video">
-        <!-- Ganti link YouTube sesuai kebutuhan -->
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID?autoplay=1&mute=1&loop=1"></iframe>
-    </div>
+</div>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-        <h2>Jadwal Semua Kelas</h2>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Kelas</th>
-                    <th>Pelajaran</th>
-                </tr>
-            </thead>
-            <tbody id="tabelJadwal"></tbody>
-        </table>
-    </div>
+<div class="container">
 
-</main>
+<div class="video">
+<h2>Video Info Mading Hari Ini</h2>
+<iframe id="videoFrame" width="100%" height="300"></iframe>
+</div>
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <marquee>
-        Selamat datang di SMA Kristen Terang Bangsa • Ability to Sacrifice • Compassion • Commitment • Excellent •Servanthood •Sincerity/Integrity Siswa
-    </marquee>
-</footer>
+<div class="sidebar">
 
-<!-- ================= SCRIPT ================= -->
-<script>
-// ===== JAM REALTIME =====
-setInterval(() => {
-  document.getElementById("jam").innerText =
-    new Date().toLocaleTimeString("id-ID");
-}, 1000);
+<div class="info">
+<h3>Info Minggu Ini</h3>
+<p id="infoMinggu"></p>
+</div>
 
-// ===== LOAD JADWAL =====
-let jadwalData = {};
+<div class="jadwal">
+<h3>Jadwal Sekarang</h3>
+<p id="jadwalSekarang"></p>
+</div>
 
-fetch("jadwal.json")
-  .then(res => res.json())
-  .then(data => {
-    jadwalData = data;
-    tampilJadwal();
-    setInterval(tampilJadwal, 30000);
-  });
+</div>
 
-// ===== HARI =====
-function hariIni() {
-  return ["minggu","senin","selasa","rabu","kamis","jumat","sabtu"][new Date().getDay()];
-}
+</div>
 
-// ===== JAM KE MENIT =====
-function keMenit(jam) {
-  const [h,m] = jam.split(":").map(Number);
-  return h * 60 + m;
-}
 
-// ===== JAM SEKARANG =====
-function jamSekarang() {
-  const d = new Date();
-  return d.getHours() * 60 + d.getMinutes();
-}
+<div class="running">
+<marquee id="pengumuman"></marquee>
+</div>
 
-// ===== TAMPILKAN SEMUA KELAS =====
-function tampilJadwal() {
-  const hari = hariIni();
-  const now = jamSekarang();
-  const tbody = document.getElementById("tabelJadwal");
 
-  tbody.innerHTML = "";
-
-  for (const kelas in jadwalData) {
-    let mapel = "Istirahat";
-    let aktif = false;
-
-    if (jadwalData[kelas][hari]) {
-      const sekarang = jadwalData[kelas][hari].find(j => {
-        const [a,b] = j.jam.split("-");
-        return now >= keMenit(a) && now <= keMenit(b);
-      });
-
-      if (sekarang) {
-        mapel = sekarang.mapel;
-        aktif = true;
-      }
-    }
-
-    const tr = document.createElement("tr");
-    if (aktif) tr.classList.add("aktif");
-
-    tr.innerHTML = `
-      <td>${kelas}</td>
-      <td>${mapel}</td>
-    `;
-    tbody.appendChild(tr);
-  }
-}
-</script>
-
+<script src="script.js"></script>
 
 </body>
 </html>
