@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Mading</title>
+</head>
+
+<body>
+
+<h2>Update Info Mading</h2>
+
+<p>Info Minggu Ini</p>
+<textarea id="infoMinggu"></textarea>
+
+<p>Jadwal Sekarang</p>
+<textarea id="jadwalSekarang"></textarea>
+
+<br><br>
+<button onclick="update()">UPDATE</button>
+
+<script>
+
+function update(){
+
+localStorage.setItem(
+"infoMinggu",
+document.getElementById("infoMinggu").value
+)
+
+localStorage.setItem(
+"jadwalSekarang",
+document.getElementById("jadwalSekarang").value
+)
+
+alert("Berhasil diupdate!")
+
+}
+
+</script>
+
+</body>
+</html>
